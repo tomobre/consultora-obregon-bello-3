@@ -10,7 +10,7 @@ import Contact from "./components/Contact";
 import Home from "./components/Home";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
-function App() {
+function App(): JSX.Element {
   const location = useLocation();
   let routes = (
     <TransitionGroup>
