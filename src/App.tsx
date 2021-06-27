@@ -1,37 +1,35 @@
 import React from "react";
 import "./App.css";
-import { Route, useLocation, Switch } from "react-router-dom";
 import Navbar from "./components/commons/Navbar";
-import Footer from "./components/commons/Footer";
 import Services from "./components/Services";
 import Team from "./components/Team";
 import Jobs from "./components/Jobs";
 import Contact from "./components/Contact";
 import Home from "./components/Home";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+import Eight from "./components/Eight";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
+// https://isaachernandez.es/sobre-mi/
+//https://jveragil.com/
+// https://thefwa.com/awards/page/1/
+// https://contra.com/freelance-industry-report-2021/
+// https://blog.hubspot.es/marketing/efecto-parallax
+// empezar a averiguar react animation on scroll
 
 function App(): JSX.Element {
-  const location = useLocation();
-  let routes = (
-    <TransitionGroup>
-      <CSSTransition timeout={500} classNames="route" key={location.key}>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/services" component={Services} />
-          <Route exact path="/team" component={Team} />
-          <Route exact path="/jobs" component={Jobs} />
-          <Route exact path="/contact" component={Contact} />
-        </Switch>
-      </CSSTransition>
-    </TransitionGroup>
-  );
+  React.useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <>
       <Navbar></Navbar>
-      <Switch>
-        <div>{routes}</div>;
-      </Switch>
-      <Footer></Footer>
+      <Home></Home>
+      <Eight></Eight>
+      <Team></Team>
+      <Services></Services>
+      <Jobs></Jobs>
+      <Contact></Contact>
     </>
   );
 }
