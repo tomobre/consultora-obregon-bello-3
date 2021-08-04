@@ -4,7 +4,11 @@ export interface NavbarProps {}
 
 const Services: React.FunctionComponent<NavbarProps> = () => {
   return (
-    <div data-aos="fade-up" className="text-gray-200 container mx-auto w-1/2">
+    <div
+      id="services"
+      data-aos="fade-up"
+      className="text-gray-200 container mx-auto w-1/2"
+    >
       <h2 className="text-4xl  text-center mb-5">¿Que hacemos?</h2>
       <div>
         <p className="my-10">

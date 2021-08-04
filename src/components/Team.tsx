@@ -5,6 +5,7 @@ export interface NavbarProps {}
 const Team: React.SFC<NavbarProps> = () => {
   return (
     <div
+      id="team"
       data-aos="fade-up"
       className=" h-screen text-gray-200 container mx-auto w-1/2"
     >

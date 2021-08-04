@@ -8,6 +8,7 @@ const Contact: React.FunctionComponent<NavbarProps> = () => {
   };
   return (
     <div
+      id="contact"
       data-aos="fade-up"
       className="h-screen text-gray-200 flex justify-center  flex-col"
     >
