@@ -7,9 +7,10 @@ const Home: React.SFC<NavbarProps> = () => {
     <div
       id="home"
       data-aos="fade-up"
-      className="h-screen text-gray-200 flex justify-center  items-center"
+      className="h-screen text-gray-200 flex justify-center  flex-col items-center"
     >
-      home
+      <img className="" src="../../images/logo-ocho.png" alt="ocho" />
+      <img src="../../images/logo-obregon-bello.png" alt="ocho" />
     </div>
   );
 };

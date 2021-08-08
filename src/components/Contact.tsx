@@ -10,22 +10,35 @@ const Contact: React.FunctionComponent<NavbarProps> = () => {
     <div
       id="contact"
       data-aos="fade-up"
-      className="h-screen text-gray-200 flex justify-center  flex-col"
+      className="h-screen flex justify-center  flex-col"
     >
-      <h3 className="text-center my-5 text-xl ">Contacto</h3>
-      <form
-        className="flex flex-col justify-center items-center text-center"
-        action=""
-      >
-        <input className=" shadow my-5 p-2" placeholder="Nombre" type="text" />
-        <input className="shadow my-5 p-2" placeholder="Email" type="text" />
-        <input className="shadow my-5 p-2" placeholder="Asunto" type="text" />
+      <h3 className="text-center my-5 text-gray-50 text-xl ">Contacto</h3>
+      <form className="container mx-auto  text-center w-1/3" action="">
         <input
-          className="shadow my-5 p-2"
-          placeholder="Mensaje..."
+          className="w-full  shadow my-5 p-2 rounded-xl"
+          placeholder="Nombre"
           type="text"
         />
-        <button className="bg-blue-500 rounded-l px-5 py-2" onClick={onSubmit}>
+        <br />
+        <input
+          className=" w-full  shadow my-5 p-2  rounded-xl"
+          placeholder="Email"
+          type="text"
+        />
+        <br />
+        <input
+          className=" w-full  shadow my-5 p-2  rounded-xl"
+          placeholder="Asunto"
+          type="text"
+        />
+        <br />
+        <textarea
+          rows="10"
+          className=" w-full   shadow my-5 p-2  rounded-xl "
+          placeholder="Mensaje..."
+        />
+        <br />
+        <button className="text-xl text-gray-50" onClick={onSubmit}>
           Enviar
         </button>
       </form>
