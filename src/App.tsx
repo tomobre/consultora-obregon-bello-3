@@ -22,7 +22,7 @@ function App(): JSX.Element {
     Aos.init({ duration: 2000 });
   }, []);
   return (
-    <>
+    <div className="font-mono text-sm">
       <Navbar></Navbar>
       <Home></Home>
       <Eight></Eight>
@@ -30,7 +30,7 @@ function App(): JSX.Element {
       <Services></Services>
       <Jobs></Jobs>
       <Contact></Contact>
-    </>
+    </div>
   );
 }
 

@@ -5,9 +5,9 @@ export interface NavbarProps {}
 
 const Navbar: React.SFC<NavbarProps> = () => {
   return (
-    <div className=" mb-10 bg-gray-200 p-5 flex justify-center sticky top-0 z-10">
+    <div className=" mb-10 bg-gray-50 p-5 flex justify-center sticky top-0 z-10 ">
       <img src="" alt="" />
-      <Link className="mx-5" to="#home">
+      <Link className="mx-5 " to="#home">
         <h3>Inicio</h3>
       </Link>
       <Link className="mx-5" to="#services">
