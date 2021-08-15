@@ -15,15 +15,35 @@ import "aos/dist/aos.css";
 // https://thefwa.com/awards/page/1/
 // https://contra.com/freelance-industry-report-2021/
 // https://blog.hubspot.es/marketing/efecto-parallax
-// empezar a averiguar react animation on scroll
 
 function App(): JSX.Element {
+  const [offsetY, setOffsetY] = React.useState(0);
+  const [eightPos, setEightPos] = React.useState(0);
+
+  //const teamRef = React.useRef(null);
+  //console.log(teamRef);
+  // const eight = document.getElementById("home").getBoundingClientRect().top;
+
+  /*   if (jobs === 0) {
+    setEightPos(0);
+  } */
+  //console.log(offsetY);
+  const handleScroll = () => {
+    setOffsetY(window.pageYOffset);
+  };
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   React.useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
   return (
     <div className="font-mono text-sm">
       <Navbar></Navbar>
+
       <Home></Home>
       <Eight></Eight>
       <Team></Team>

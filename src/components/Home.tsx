@@ -9,7 +9,12 @@ const Home: React.SFC<NavbarProps> = () => {
       data-aos="fade-up"
       className="h-screen text-gray-200 flex justify-center  flex-col items-center"
     >
-      <img className="" src="../../images/logo-ocho.png" alt="ocho" />
+      <img
+        id="eight"
+        className=""
+        src="../../images/logo-ocho.png"
+        alt="ocho"
+      />
       <img src="../../images/logo-obregon-bello.png" alt="ocho" />
     </div>
   );
