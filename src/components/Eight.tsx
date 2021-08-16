@@ -6,9 +6,8 @@ const Eight: React.FunctionComponent<NavbarProps> = () => {
   return (
     <div
       data-aos="fade-up"
-      className="h-screen text-gray-200 container mx-auto  text-right w-1/2 "
+      className="h-screen text-gray-200 container mx-auto  text-right w-1/2 pt-10 "
     >
-      <h2 className="text-4xl">8</h2>
       <p>
         El signo de la habilidad ejecutiva, la gestión, el sacrificio y el
         poder.
