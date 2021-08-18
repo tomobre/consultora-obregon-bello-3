@@ -50,25 +50,27 @@ function App(): JSX.Element {
   React.useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
-  const scaleAnim = useTransform(
-    scrollYProgress,
-    [0, 0.05, 0.06, 0.14, 0.15],
-    [1, 0.5, 0.3, 0.3, 0.5]
-  );
+  const scaleAnim = useTransform(scrollYProgress, [0, 0.01, 0.03], [1, 1, 0.5]);
   const yPosAnim = useTransform(
     scrollYProgress,
-    [0, 0.01, 0.03, 0.05, 0.15, 0.2, 0.31, 0.5, 0.58, 0.7, 0.91],
-    [370, 370, 950, 950, 1900, 1900, 3000, 3000, 4800, 4800, 7400]
+    [0, 0.01, 0.03, 0.05, 0.07, 0.15, 0.2, 0.31, 0.5, 0.58, 0.7, 0.91],
+    [370, 370, 950, 950, 950, 1900, 1900, 3000, 3000, 4780, 4780, 7400]
   );
   const xPosAnim = useTransform(
     scrollYProgress,
-    [0, 0.05, 0.15],
-    [620, 660, 310]
+    [0, 0.01, 0.03, 0.05, 0.07, 0.15],
+    [620, 620, 660, 660, 660, 310]
   );
   const opacity = useTransform(
     scrollYProgress,
-    [0, 0.01, 0.03, 0.05, 0.15, 0.2, 0.31, 0.5, 0.58, 0.7, 0.91],
-    [1, 0.1, 1, 1, 1900, 1900, 3000, 3000, 4800, 4800, 7400]
+    [
+      0, 0.01, 0.015, 0.025, 0.03, 0.05, 0.07, 0.075, 0.145, 0.15, 0.2, 0.205,
+      0.305, 0.31, 0.5, 0.505, 0.575, 0.58, 0.7, 0.705, 0.905, 0.91,
+    ],
+    [
+      1, 1, 0.2, 0.2, 1, 1, 1, 0.2, 0.2, 1, 1, 0.2, 0.2, 1, 1, 0.2, 0.2, 1, 1,
+      0.2, 0.2, 1,
+    ]
   );
 
   return (
@@ -80,6 +82,7 @@ function App(): JSX.Element {
           y: yPosAnim,
           x: xPosAnim,
           opacity: opacity,
+          transformOrigin: "center center initial",
         }}
       >
         <img
