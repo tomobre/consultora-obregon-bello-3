@@ -39,7 +39,7 @@ const Team: React.SFC<NavbarProps> = () => {
             {" "}
             <img
               className="w-8 my-5"
-              src="./src/iimages/logo-linkedin.png"
+              src="/dist/assets/images/logo-linkedin.png"
               alt=""
             />
           </a>
@@ -73,7 +73,7 @@ const Team: React.SFC<NavbarProps> = () => {
             {" "}
             <img
               className="w-8 my-5"
-              src="./src/images/logo-linkedin.png"
+              src="/dist/assets/images/logo-linkedin.png"
               alt=""
             />
           </a>

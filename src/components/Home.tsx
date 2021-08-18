@@ -8,7 +8,7 @@ const Home: React.SFC<NavbarProps> = () => {
       id="home"
       className="h-screen text-gray-200 flex justify-center pt-60  flex-col items-center"
     >
-      <img src="./src/images/logo-obregon-bello.png" alt="ocho" />
+      <img src="/dist/assets/images/logo-obregon-bello.png" alt="ocho" />
     </div>
   );
 };
