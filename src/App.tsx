@@ -89,7 +89,7 @@ function App(): JSX.Element {
         <img
           id="eight"
           className="absolute"
-          src="/dist/assets/images/logo-ocho.png"
+          src="assets/images/logo-ocho.png"
           alt="ocho"
         />
       </motion.div>
