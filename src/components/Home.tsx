@@ -1,5 +1,5 @@
 import React from "react";
-import eight from "/images/logo-obregon-bello.png";
+import eight from "images/logo-obregon-bello.png";
 
 export interface NavbarProps {}
 

@@ -18,7 +18,7 @@ import {
   useTransform,
   useViewportScroll,
 } from "framer-motion";
-import eightLogo from "/images/logo-ocho.png";
+import eightLogo from "images/logo-ocho.png";
 
 // https://isaachernandez.es/sobre-mi/
 //https://jveragil.com/

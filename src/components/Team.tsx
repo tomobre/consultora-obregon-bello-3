@@ -1,5 +1,5 @@
 import React from "react";
-import linkedinLogo from "/images/logo-linkedin.png";
+import linkedinLogo from "images/logo-linkedin.png";
 
 export interface NavbarProps {}
 
