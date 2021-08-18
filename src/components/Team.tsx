@@ -1,4 +1,5 @@
 import React from "react";
+import linkedinLogo from "/images/logo-linkedin.png";
 
 export interface NavbarProps {}
 
@@ -37,7 +38,7 @@ const Team: React.SFC<NavbarProps> = () => {
           </p>
           <a target="_blank" href="https://ar.linkedin.com/in/oscarobregon">
             {" "}
-            <img className="w-8 my-5" src="/images/logo-linkedin.png" alt="" />
+            <img className="w-8 my-5" src={linkedinLogo} alt="" />
           </a>
         </div>
       </div>
@@ -67,7 +68,7 @@ const Team: React.SFC<NavbarProps> = () => {
           </p>
           <a target="_blank" href="https://ar.linkedin.com/in/oscarobregon">
             {" "}
-            <img className="w-8 my-5" src="/images/logo-linkedin.png" alt="" />
+            <img className="w-8 my-5" src={linkedinLogo} alt="" />
           </a>
         </div>
       </div>
