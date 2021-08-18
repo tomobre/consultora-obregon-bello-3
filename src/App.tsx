@@ -1,5 +1,4 @@
-// @ts-ignore
-/// <reference no-default-lib="true"/>
+// @ts-nocheck
 import React from "react";
 import "./App.css";
 import Navbar from "./components/commons/Navbar";
