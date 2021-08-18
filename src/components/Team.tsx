@@ -37,11 +37,7 @@ const Team: React.SFC<NavbarProps> = () => {
           </p>
           <a target="_blank" href="https://ar.linkedin.com/in/oscarobregon">
             {" "}
-            <img
-              className="w-8 my-5"
-              src="../../images/logo-linkedin.png"
-              alt=""
-            />
+            <img className="w-8 my-5" src="/images/logo-linkedin.png" alt="" />
           </a>
         </div>
       </div>
@@ -71,11 +67,7 @@ const Team: React.SFC<NavbarProps> = () => {
           </p>
           <a target="_blank" href="https://ar.linkedin.com/in/oscarobregon">
             {" "}
-            <img
-              className="w-8 my-5"
-              src="../../images/logo-linkedin.png"
-              alt=""
-            />
+            <img className="w-8 my-5" src="/images/logo-linkedin.png" alt="" />
           </a>
         </div>
       </div>

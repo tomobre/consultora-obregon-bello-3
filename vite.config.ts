@@ -3,6 +3,6 @@ import reactRefresh from "@vitejs/plugin-react-refresh";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/consultora-obregon-bello-2/",
+  base: "/consultora-obregon-bello-3/",
   plugins: [reactRefresh()],
 });
