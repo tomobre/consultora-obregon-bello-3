@@ -19,7 +19,6 @@ import {
   useViewportScroll,
 } from "framer-motion";
 
-
 // https://isaachernandez.es/sobre-mi/
 //https://jveragil.com/
 // https://thefwa.com/awards/page/1/
@@ -90,7 +89,7 @@ function App(): JSX.Element {
         <img
           id="eight"
           className="absolute"
-          src="images/logo-ocho.png"
+          src="./src/images/logo-ocho.png"
           alt="ocho"
         />
       </motion.div>
