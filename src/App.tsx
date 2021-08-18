@@ -18,7 +18,7 @@ import {
   useTransform,
   useViewportScroll,
 } from "framer-motion";
-import eightLogo from "images/logo-ocho.png";
+
 
 // https://isaachernandez.es/sobre-mi/
 //https://jveragil.com/
@@ -87,7 +87,12 @@ function App(): JSX.Element {
           transformOrigin: "center center initial",
         }}
       >
-        <img id="eight" className="absolute" src={eightLogo} alt="ocho" />
+        <img
+          id="eight"
+          className="absolute"
+          src="images/logo-ocho.png"
+          alt="ocho"
+        />
       </motion.div>
       <Home></Home>
 
