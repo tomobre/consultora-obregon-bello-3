@@ -14,7 +14,7 @@ const Contact: React.FunctionComponent<NavbarProps> = () => {
       className="h-screen flex justify-center  flex-col"
     >
       <h3 className="text-center my-5 text-gray-50 text-xl ">Contacto</h3>
-      <form className="container mx-auto  text-center w-1/3" action="">
+      <form className="container mx-auto  text-center w-2/3 md:w-1/3" action="">
         <input
           className="w-full  shadow my-5 p-2 rounded-xl"
           placeholder="Nombre"

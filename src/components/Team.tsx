@@ -4,7 +4,10 @@ export interface NavbarProps {}
 
 const Team: React.SFC<NavbarProps> = () => {
   return (
-    <div id="team" className=" h-screen text-gray-200 container mx-auto w-2/3">
+    <div
+      id="team"
+      className=" md:h-screen text-gray-200 container mx-auto w-2/3"
+    >
       <h2 data-aos="fade-up" className="text-4xl  text-center mb-20">
         ¿Quienes somos?
       </h2>

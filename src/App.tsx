@@ -102,8 +102,8 @@ function App(): JSX.Element {
       >
         <img
           id="eight"
-          className="absolute"
-          src="assets/images/logo-ocho.png"
+          className="absolute hidden md:block"
+          src="dist/assets/images/logo-ocho.png"
           alt="ocho"
         />
       </motion.div>
