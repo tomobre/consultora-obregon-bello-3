@@ -5,7 +5,7 @@ export interface NavbarProps {}
 
 const Jobs: React.SFC<NavbarProps> = () => {
   return (
-    <div className="my-60">
+    <div className="my-60 container mx-auto w-2/3">
       <h3
         data-aos="fade-up"
         className="text-center my-20 text-gray-50 text-xl "
@@ -22,7 +22,7 @@ const Jobs: React.SFC<NavbarProps> = () => {
         >
           <div data-aos="fade-up">
             {" "}
-            <div className="flex justify-center">
+            <div className="flex justify-end mx-10">
               {" "}
               <iframe
                 className="mx-10"
@@ -55,7 +55,7 @@ const Jobs: React.SFC<NavbarProps> = () => {
           </div>
           <div data-aos="fade-up" className="row-start-3">
             {" "}
-            <div className="flex justify-center">
+            <div className="flex  justify-end mx-10">
               {" "}
               <iframe
                 data-aos="fade-up"
@@ -94,7 +94,7 @@ const Jobs: React.SFC<NavbarProps> = () => {
         >
           <div data-aos="fade-up" className="row-start-2">
             {" "}
-            <div className="flex justify-center">
+            <div className="flex justify-start mx-10">
               {" "}
               <iframe
                 className="mx-10"
@@ -127,7 +127,7 @@ const Jobs: React.SFC<NavbarProps> = () => {
           </div>
           <div data-aos="fade-up" className="row-start-4">
             {" "}
-            <div className="flex justify-center">
+            <div className="flex justify-start mx-10">
               {" "}
               <iframe
                 className="mx-10"
