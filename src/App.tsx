@@ -75,7 +75,7 @@ function App(): JSX.Element {
       /* que hacemos */ 0.31, 0.5, /* proyectos */ 0.58, 0.7,
       /* contacto */ 0.91,
     ],
-    //    laptop1024 [  0, 0.01 /* signif ocho */, 0.03, 0.05, 0.07, /* quienes somos */ 0.15, 0.2, /* que hacemos */ 0.31, 0.5, /* proyectos */ 0.58, 0.7,/* contacto */ 0.91,],
+
     [
       300,
       300,
@@ -89,15 +89,12 @@ function App(): JSX.Element {
       pos.jobs,
       pos.contact,
     ]
-    //   laptop1024  [370, 370, 950, 950, 950, 1900, 1900, 3000, 3000, 4780, 4780, 7400]
   );
   const xPosAnim = useTransform(
     scrollYProgress,
     [0, 0.01, 0.03, 0.05, 0.07, 0.15],
-    // laptop1024     [0, 0.01, 0.03, 0.05, 0.07, 0.15],
-    [420, 420, 450, 450, 450, 200]
 
-    // laptop1024  [620, 620, 660, 660, 660, 310]
+    [420, 420, 450, 450, 450, 200]
   );
   const opacity = useTransform(
     scrollYProgress,
@@ -105,59 +102,56 @@ function App(): JSX.Element {
       0, 0.01, 0.015, 0.025, 0.03, 0.05, 0.07, 0.075, 0.145, 0.15, 0.2, 0.255,
       0.305, 0.31, 0.5, 0.505, 0.575, 0.58, 0.7, 0.705, 0.905, 0.91,
     ],
-    // laptop1024  [0, 0.01, 0.015, 0.025, 0.03, 0.05, 0.07, 0.075, 0.145, 0.15, 0.2, 0.205,0.305, 0.31, 0.5, 0.505, 0.575, 0.58, 0.7, 0.705, 0.905, 0.91, ],
     [
       1, 1, 0.2, 0.2, 1, 1, 1, 0.2, 0.2, 1, 1, 0.2, 0.2, 1, 1, 0.2, 0.2, 1, 1,
       0.2, 0.2, 1,
     ]
-    //  laptop1024[ 1, 1, 0.2, 0.2, 1, 1, 1, 0.2, 0.2, 1, 1, 0.2, 0.2, 1, 1, 0.2, 0.2, 1, 1,0.2, 0.2, 1,]
   );
 
   return (
-    <div className="font-mono text-sm container">
+    <div className="font-mono text-sm">
       <Navbar></Navbar>
-      <div>
+      <div className="maxWidth">
         {" "}
-        <motion.div
-          style={{
-            scale: scaleAnim,
-            y: yPosAnim,
-            x: xPosAnim,
-            opacity: opacity,
-            transformOrigin: "center center initial",
-          }}
-        >
-          <img
-            id="eight"
-            className="absolute hidden md:block "
-            src="dist/assets/images/logo-ocho.png"
-            alt="ocho"
-          />
-        </motion.div>
-      </div>
-
-      <div ref={homeRef}>
-        <Home></Home>
-      </div>
-
-      <div ref={eightRef}>
-        <Eight></Eight>
-      </div>
-
-      <div ref={teamRef}>
-        <Team></Team>
-      </div>
-
-      <div ref={servicesRef}>
-        <Services></Services>
-      </div>
-      <div ref={jobsRef}>
-        {" "}
-        <Jobs></Jobs>
-      </div>
-      <div ref={contactRef}>
-        {" "}
-        <Contact></Contact>
+        <div>
+          {" "}
+          <motion.div
+            style={{
+              scale: scaleAnim,
+              y: yPosAnim,
+              x: xPosAnim,
+              opacity: opacity,
+              transformOrigin: "center center initial",
+            }}
+          >
+            <img
+              id="eight"
+              className="absolute hidden md:block "
+              src="dist/assets/images/logo-ocho.png"
+              alt="ocho"
+            />
+          </motion.div>
+        </div>
+        <div ref={homeRef}>
+          <Home></Home>
+        </div>
+        <div ref={eightRef}>
+          <Eight></Eight>
+        </div>
+        <div ref={teamRef}>
+          <Team></Team>
+        </div>
+        <div ref={servicesRef}>
+          <Services></Services>
+        </div>
+        <div ref={jobsRef}>
+          {" "}
+          <Jobs></Jobs>
+        </div>
+        <div ref={contactRef}>
+          {" "}
+          <Contact></Contact>
+        </div>
       </div>
     </div>
   );

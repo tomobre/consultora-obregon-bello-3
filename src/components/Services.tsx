@@ -8,7 +8,15 @@ const Services: React.FunctionComponent<NavbarProps> = () => {
       <h2 className="text-4xl  text-center mb-5">¿Que hacemos?</h2>
       <div data-aos="fade-up">
         <div className="flex justify-center">
-          <p className="bg-gray-50 inline  text-center text-gray-50">ff</p>
+          <div className=" text-center w-8 ">
+            {" "}
+            <img
+              id="eight"
+              className="  "
+              src="dist/assets/images/logo-ocho.png"
+              alt="ocho"
+            />
+          </div>
         </div>
 
         <p className="my-10 text-center">
@@ -20,7 +28,15 @@ const Services: React.FunctionComponent<NavbarProps> = () => {
       </div>
       <div data-aos="fade-up">
         <div className="flex justify-center">
-          <p className="bg-gray-50 inline  text-center text-gray-50">ff</p>
+          <div className=" text-center w-8 ">
+            {" "}
+            <img
+              id="eight"
+              className="  "
+              src="dist/assets/images/logo-ocho.png"
+              alt="ocho"
+            />
+          </div>
         </div>
 
         <p className="my-10 text-center">
@@ -34,7 +50,15 @@ const Services: React.FunctionComponent<NavbarProps> = () => {
       </div>
       <div data-aos="fade-up">
         <div className="flex justify-center">
-          <p className="bg-gray-50 inline  text-center text-gray-50">ff</p>
+          <div className=" text-center w-8 ">
+            {" "}
+            <img
+              id="eight"
+              className="  "
+              src="dist/assets/images/logo-ocho.png"
+              alt="ocho"
+            />
+          </div>
         </div>
 
         <p className="my-10 text-center">
