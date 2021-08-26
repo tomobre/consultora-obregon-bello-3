@@ -13,7 +13,7 @@ const Services: React.FunctionComponent<NavbarProps> = () => {
             <img
               id="eight"
               className="  "
-              src="dist/assets/images/logo-ocho.png"
+              src="assets/images/logo-ocho.png"
               alt="ocho"
             />
           </div>
@@ -33,7 +33,7 @@ const Services: React.FunctionComponent<NavbarProps> = () => {
             <img
               id="eight"
               className="  "
-              src="dist/assets/images/logo-ocho.png"
+              src="assets/images/logo-ocho.png"
               alt="ocho"
             />
           </div>
@@ -55,7 +55,7 @@ const Services: React.FunctionComponent<NavbarProps> = () => {
             <img
               id="eight"
               className="  "
-              src="dist/assets/images/logo-ocho.png"
+              src="assets/images/logo-ocho.png"
               alt="ocho"
             />
           </div>
