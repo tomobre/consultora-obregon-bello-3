@@ -83,7 +83,7 @@ const Navbar: React.SFC<NavbarProps> = () => {
     },
   ];
   return (
-    <div className=" md:mb-10 w-screen bg-gray-50 p-5 flex justify-center sticky top-0 z-10 ">
+    <div className=" md:mb-10  bg-gray-50 p-5 flex justify-center sticky top-0 z-10 left-1/2  absolute transform -translate-x-2/4 w-max-content mx-auto">
       <img src="" alt="" />
       <Link className="mx-5 " to="#home">
         <h3>Inicio</h3>

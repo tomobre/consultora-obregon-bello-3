@@ -6,37 +6,37 @@ export interface NavbarProps {}
 const VideoSlider = () => {
   const videos = [
     {
-      video: "https://www.youtube.com/embed/8sng7Nxrtqc",
+      video: "https://www.youtube.com/embed/INZBjxEETZ8",
       title: "1",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamu  interdum mauris sed mauris molestie, vel tempor dui ornare. Fusce gravida convallis ligula, nec tempor nunc. Donec auctor,velit eu sodales porttitor, ipsum nulla luctus turpis, a temporurna augue nec diam. Maecenas id sodales erat, in dictum metus.Quisque dictum porttitor risus, at vehicula mauris molestievitae. Duis fringilla laoreet massa. Ut elementum nibh dui, ac rhoncus lacus tincidunt a. Vivamus gravida sapien orci,    pulvinar ex dignissim eget.",
     },
     {
-      video: "https://www.youtube.com/embed/8sng7Nxrtqc",
+      video: "https://www.youtube.com/embed/fK6Thie-BRI",
       title: "2",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamu  interdum mauris sed mauris molestie, vel tempor dui ornare. Fusce gravida convallis ligula, nec tempor nunc. Donec auctor,velit eu sodales porttitor, ipsum nulla luctus turpis, a temporurna augue nec diam. Maecenas id sodales erat, in dictum metus.Quisque dictum porttitor risus, at vehicula mauris molestievitae. Duis fringilla laoreet massa. Ut elementum nibh dui, ac rhoncus lacus tincidunt a. Vivamus gravida sapien orci,    pulvinar ex dignissim eget.",
     },
     {
-      video: "https://www.youtube.com/embed/8sng7Nxrtqc",
+      video: "https://www.youtube.com/embed/X5jelHuzlH0",
       title: "3",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamu  interdum mauris sed mauris molestie, vel tempor dui ornare. Fusce gravida convallis ligula, nec tempor nunc. Donec auctor,velit eu sodales porttitor, ipsum nulla luctus turpis, a temporurna augue nec diam. Maecenas id sodales erat, in dictum metus.Quisque dictum porttitor risus, at vehicula mauris molestievitae. Duis fringilla laoreet massa. Ut elementum nibh dui, ac rhoncus lacus tincidunt a. Vivamus gravida sapien orci,    pulvinar ex dignissim eget.",
     },
     {
-      video: "https://www.youtube.com/embed/8sng7Nxrtqc",
+      video: "https://www.youtube.com/embed/4rczwreN_9E",
       title: "4",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamu  interdum mauris sed mauris molestie, vel tempor dui ornare. Fusce gravida convallis ligula, nec tempor nunc. Donec auctor,velit eu sodales porttitor, ipsum nulla luctus turpis, a temporurna augue nec diam. Maecenas id sodales erat, in dictum metus.Quisque dictum porttitor risus, at vehicula mauris molestievitae. Duis fringilla laoreet massa. Ut elementum nibh dui, ac rhoncus lacus tincidunt a. Vivamus gravida sapien orci,    pulvinar ex dignissim eget.",
     },
     {
-      video: "https://www.youtube.com/embed/8sng7Nxrtqc",
+      video: "https://www.youtube.com/embed/aho_Dtmckm0",
       title: "5",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamu  interdum mauris sed mauris molestie, vel tempor dui ornare. Fusce gravida convallis ligula, nec tempor nunc. Donec auctor,velit eu sodales porttitor, ipsum nulla luctus turpis, a temporurna augue nec diam. Maecenas id sodales erat, in dictum metus.Quisque dictum porttitor risus, at vehicula mauris molestievitae. Duis fringilla laoreet massa. Ut elementum nibh dui, ac rhoncus lacus tincidunt a. Vivamus gravida sapien orci,    pulvinar ex dignissim eget.",
     },
     {
-      video: "https://www.youtube.com/embed/8sng7Nxrtqc",
+      video: "https://www.youtube.com/embed/tpgYm7IiSDM",
       title: "6",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamu  interdum mauris sed mauris molestie, vel tempor dui ornare. Fusce gravida convallis ligula, nec tempor nunc. Donec auctor,velit eu sodales porttitor, ipsum nulla luctus turpis, a temporurna augue nec diam. Maecenas id sodales erat, in dictum metus.Quisque dictum porttitor risus, at vehicula mauris molestievitae. Duis fringilla laoreet massa. Ut elementum nibh dui, ac rhoncus lacus tincidunt a. Vivamus gravida sapien orci,    pulvinar ex dignissim eget.",
@@ -130,7 +130,7 @@ const Jobs: React.SFC<NavbarProps> = () => {
                 className="mx-10"
                 width="500"
                 height="300"
-                src="https://www.youtube.com/embed/8sng7Nxrtqc"
+                src="https://www.youtube.com/embed/INZBjxEETZ8"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -164,7 +164,7 @@ const Jobs: React.SFC<NavbarProps> = () => {
                 className="mx-10"
                 width="500"
                 height="300"
-                src="https://www.youtube.com/embed/8sng7Nxrtqc"
+                src="https://www.youtube.com/embed/fK6Thie-BRI"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -202,7 +202,7 @@ const Jobs: React.SFC<NavbarProps> = () => {
                 className="mx-10"
                 width="500"
                 height="300"
-                src="https://www.youtube.com/embed/8sng7Nxrtqc"
+                src="https://www.youtube.com/embed/X5jelHuzlH0"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -235,7 +235,7 @@ const Jobs: React.SFC<NavbarProps> = () => {
                 className="mx-10"
                 width="500"
                 height="300"
-                src="https://www.youtube.com/embed/8sng7Nxrtqc"
+                src="https://www.youtube.com/embed/4rczwreN_9E"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

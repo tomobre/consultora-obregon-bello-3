@@ -17,6 +17,7 @@ import {
   Frame,
   useTransform,
   useViewportScroll,
+  useElementScroll,
 } from "framer-motion";
 
 // https://isaachernandez.es/sobre-mi/
@@ -26,28 +27,43 @@ import {
 // https://blog.hubspot.es/marketing/efecto-parallax
 
 function App(): JSX.Element {
-  const [offsetY, setOffsetY] = React.useState(0);
-  const [eightPos, setEightPos] = React.useState(0);
-  const [eachPos, setEachPos] = React.useState({
-    eight: 0,
-    team: 0,
-    jobs: 0,
-    services: 0,
-    contact: 0,
+  const homeRef = React.useRef();
+  const eightRef = React.useRef();
+  const teamRef = React.useRef();
+  const contactRef = React.useRef();
+  const servicesRef = React.useRef();
+  const jobsRef = React.useRef();
+  const { scrollYProgress } = useViewportScroll();
+  const [pos, setPos] = React.useState({
+    home: null,
+    eight: null,
+    team: null,
+    jobs: null,
+    services: null,
+    contact: null,
   });
 
-  const { scrollYProgress, scrollY } = useViewportScroll();
+  console.log(scrollYProgress);
 
-  console.log(scrollY);
-  const handleScroll = () => {
-    setOffsetY(window.pageYOffset);
-  };
   React.useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    const homePos = homeRef.current.getBoundingClientRect().top;
+    const eightPos = eightRef.current.getBoundingClientRect().top - 200;
+    const teamPos = teamRef.current.getBoundingClientRect().top - 270;
+    const contactPos = contactRef.current.getBoundingClientRect().top;
+    const jobsPos = jobsRef.current.getBoundingClientRect().top - 270;
+    const servicesPos = servicesRef.current.getBoundingClientRect().top - 270;
+    console.log(teamPos);
+
+    setPos({
+      home: homePos,
+      eight: eightPos,
+      team: teamPos,
+      jobs: jobsPos,
+      services: servicesPos,
+      contact: contactPos,
+    });
   }, []);
+
   React.useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
@@ -55,15 +71,23 @@ function App(): JSX.Element {
   const yPosAnim = useTransform(
     scrollYProgress,
     [
-      0, 0.01 /* signif ocho */, 0.03, 0.05, 0.07, /* quienes somos */ 0.15,
-      0.25, /* que hacemos */ 0.31, 0.5, /* proyectos */ 0.58, 0.7,
+      0, 0.01 /* signif ocho */, 0.03, 0.07, /* quienes somos */ 0.15, 0.25,
+      /* que hacemos */ 0.31, 0.5, /* proyectos */ 0.58, 0.7,
       /* contacto */ 0.91,
     ],
     //    laptop1024 [  0, 0.01 /* signif ocho */, 0.03, 0.05, 0.07, /* quienes somos */ 0.15, 0.2, /* que hacemos */ 0.31, 0.5, /* proyectos */ 0.58, 0.7,/* contacto */ 0.91,],
     [
-      500, 500, /* signif ocho */ 1500, 1500, 1500, /* quienes somos */ 3050,
-      3050, /* que hacemos */ 4750, 4750, /* proyectos */ 6200, 6200,
-      /* contacto */ 9060,
+      300,
+      300,
+      pos.eight,
+      pos.eight,
+      pos.team,
+      pos.team,
+      pos.services,
+      pos.services,
+      pos.jobs,
+      pos.jobs,
+      pos.contact,
     ]
     //   laptop1024  [370, 370, 950, 950, 950, 1900, 1900, 3000, 3000, 4780, 4780, 7400]
   );
@@ -71,7 +95,8 @@ function App(): JSX.Element {
     scrollYProgress,
     [0, 0.01, 0.03, 0.05, 0.07, 0.15],
     // laptop1024     [0, 0.01, 0.03, 0.05, 0.07, 0.15],
-    [1175, 1175, 1200, 1200, 1200, 590]
+    [420, 420, 450, 450, 450, 200]
+
     // laptop1024  [620, 620, 660, 660, 660, 310]
   );
   const opacity = useTransform(
@@ -89,31 +114,51 @@ function App(): JSX.Element {
   );
 
   return (
-    <div className="font-mono text-sm">
+    <div className="font-mono text-sm container">
       <Navbar></Navbar>
-      <motion.div
-        style={{
-          scale: scaleAnim,
-          y: yPosAnim,
-          x: xPosAnim,
-          opacity: opacity,
-          transformOrigin: "center center initial",
-        }}
-      >
-        <img
-          id="eight"
-          className="absolute hidden md:block"
-          src="dist/assets/images/logo-ocho.png"
-          alt="ocho"
-        />
-      </motion.div>
-      <Home></Home>
+      <div>
+        {" "}
+        <motion.div
+          style={{
+            scale: scaleAnim,
+            y: yPosAnim,
+            x: xPosAnim,
+            opacity: opacity,
+            transformOrigin: "center center initial",
+          }}
+        >
+          <img
+            id="eight"
+            className="absolute hidden md:block "
+            src="dist/assets/images/logo-ocho.png"
+            alt="ocho"
+          />
+        </motion.div>
+      </div>
 
-      <Eight></Eight>
-      <Team></Team>
-      <Services></Services>
-      <Jobs></Jobs>
-      <Contact></Contact>
+      <div ref={homeRef}>
+        <Home></Home>
+      </div>
+
+      <div ref={eightRef}>
+        <Eight></Eight>
+      </div>
+
+      <div ref={teamRef}>
+        <Team></Team>
+      </div>
+
+      <div ref={servicesRef}>
+        <Services></Services>
+      </div>
+      <div ref={jobsRef}>
+        {" "}
+        <Jobs></Jobs>
+      </div>
+      <div ref={contactRef}>
+        {" "}
+        <Contact></Contact>
+      </div>
     </div>
   );
 }
