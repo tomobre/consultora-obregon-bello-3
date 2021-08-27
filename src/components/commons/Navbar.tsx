@@ -34,105 +34,74 @@ const Navbar: React.SFC<NavbarProps> = () => {
   };
   const Settings = [
     {
-      id: "training",
-      title: "Training Programs",
+      id: "inicio",
+      title: "Inicio",
       type: "Link",
-      path: "/training",
+      path: "#home",
     },
     {
-      id: "pricing",
-      title: "Pricing",
+      id: "services",
+      title: "¿Que hacemos?",
       type: "Link",
-      path: "/pricing",
+      path: "#services",
     },
     {
-      id: "about-ctedu",
-      title: "About CTEDU & The Team",
+      id: "team",
+      title: "¿Quienes Somos?",
       type: "Link",
-      path: "/about",
+      path: "#team",
     },
     {
-      id: "contact-admissions",
-      title: "Contact",
+      id: "jobs",
+      title: "Proyectos",
       type: "Link",
-      path: "/contact",
+      path: "#jobs",
     },
     {
-      id: "blog",
-      title: "Blog",
+      id: "contact",
+      title: "Contacto",
       type: "Link",
-      path: "/blog/",
-    },
-    {
-      id: "faqs",
-      title: "Faqs",
-      type: "Link",
-      path: "/about/faq",
-    },
-    {
-      id: "kb",
-      title: "Knowledge Base",
-      type: "Link",
-      path: "/about/learning-philosophy",
-    },
-    {
-      id: "apply",
-      title: "Apply",
-      type: "Button",
-      path: "https://campus.coachtrainingedu.com/apply",
+      path: "#contact",
     },
   ];
   return (
-    <div className=" md:mb-10  bg-gray-50 p-5 flex justify-center sticky top-0 z-10 ">
-      <img src="" alt="" />
-      <Link className="mx-5 " to="#home">
-        <h3>Inicio</h3>
-      </Link>
-      <Link className="mx-5" to="#services">
-        <h3>¿Que hacemos?</h3>
-      </Link>
-      <Link className="mx-5" to="#team">
-        <h3>¿Quienes somos?</h3>
-      </Link>
-      <Link className="mx-5" to="#jobs">
-        <h3>Proyectos</h3>
-      </Link>
-      <Link className="mx-5" to="#contact">
-        <h3>Contacto</h3>
-      </Link>
-      <div className="hidden">
-        <div className="items-center uppercase font-menu whitespace-nowrap">
-          {dropdowns["mobile-menu"] && (
-            <Dropdown menuItems={Settings} handler={() => true} />
-          )}
+    <div className=" md:mb-10  bg-gray-50 p-5 flex md:justify-center sticky top-0 z-10 ">
+      <div className="md:flex hidden ">
+        {Settings.map((option) => {
+          return (
+            <Link className="mx-5 " to={option.path}>
+              {option.title}
+            </Link>
+          );
+        })}
+      </div>
+      <div className="md:hidden">
+        <div
+          className={`inline uppercase font-menu  ${
+            dropdowns["mobile-menu"] ? "mob-menu active" : "mob-menu"
+          }`}
+        >
+          <Dropdown menuItems={Settings} handler={() => true} />
         </div>
-        <div className="pl-28 flex items-center ">
-          <div>
-            <ul className="flex items-center">
-              <div
-                // className="nav-links"
-                className="pr-8 cursor-pointer p-5 flex flex-col items-center uppercase font-menu text-gray-700 whitespace-nowrap"
-                onClick={hanldeMobileMenu}
-                key="mobile-menu"
-                id="mobile-menu"
-              >
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-10"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </li>
-              </div>
-            </ul>
-          </div>
+        <div
+          // className="nav-links"
+          className=" cursor-pointer  uppercase font-menu text-gray-700 whitespace-nowrap"
+          onClick={hanldeMobileMenu}
+          key="mobile-menu"
+          id="mobile-menu"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fillRule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clipRule="evenodd"
+            />
+          </svg>
         </div>
       </div>
     </div>

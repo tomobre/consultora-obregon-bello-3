@@ -11,12 +11,16 @@ const Team: React.SFC<NavbarProps> = () => {
       <h2 data-aos="fade-up" className="text-4xl  text-center mb-20">
         ¿Quienes somos?
       </h2>
-      <div data-aos="fade-up" className="grid grid-cols-4 my-10">
-        <img
-          className="rounded-full  p-5"
-          src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Jeff_Bezos_at_Amazon_Spheres_Grand_Opening_in_Seattle_-_2018_%2839074799225%29_%28cropped%29.jpg"
-          alt=""
-        />
+      <div data-aos="fade-up" className="grid md:grid-cols-4 my-10">
+        <div className="">
+          {" "}
+          <img
+            className="rounded-full  px-5 pb-5"
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Jeff_Bezos_at_Amazon_Spheres_Grand_Opening_in_Seattle_-_2018_%2839074799225%29_%28cropped%29.jpg"
+            alt=""
+          />
+        </div>
+
         <div className="col-span-3">
           <h4 className="text-gray-900 bg-gray-50 inline text-xl">
             Oscar Obregon
@@ -49,9 +53,9 @@ const Team: React.SFC<NavbarProps> = () => {
         </div>
       </div>
 
-      <div data-aos="fade-up" className="grid grid-cols-4">
+      <div data-aos="fade-up" className="grid md:grid-cols-4">
         <img
-          className="rounded-full  p-5"
+          className="rounded-full  px-5 pb-5"
           src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Jeff_Bezos_at_Amazon_Spheres_Grand_Opening_in_Seattle_-_2018_%2839074799225%29_%28cropped%29.jpg"
           alt=""
         />

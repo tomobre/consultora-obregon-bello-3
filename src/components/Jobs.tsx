@@ -56,20 +56,46 @@ const VideoSlider = () => {
     <section className="relative flex justify-center items-center">
       <div
         onClick={prevSlide}
-        className="absolute left-14 text-4xl  top-0 text-white z-10 cursor-pointer select-none"
+        className="absolute left-12 text-4xl  top-12 text-white z-10 cursor-pointer select-none"
       >
-        ⇦
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-7 w-7"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z"
+          />
+        </svg>
       </div>
       <div
-        className="absolute right-14 top-0 text-4xl text-white z-10 cursor-pointer select-none"
+        className="absolute right-12 top-12 text-4xl text-white z-10 cursor-pointer select-none"
         onClick={nextSlide}
       >
-        ⇨
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-7 w-7"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
       </div>
       {videos.map((vid, index) => {
         return (
           <div
-            className={`${index === current ? "block" : "hidden"}`}
+            className={`  ${index === current ? "slide active" : "slide"}`}
             key={index}
           >
             {" "}
@@ -78,8 +104,8 @@ const VideoSlider = () => {
                 <div className="flex justify-end mx-10">
                   <iframe
                     className="mx-10"
-                    width="300"
-                    height="100"
+                    width="250"
+                    height="150"
                     src={vid.video}
                     title="YouTube video player"
                     frameborder="0"
@@ -87,11 +113,11 @@ const VideoSlider = () => {
                     allowfullscreen
                   ></iframe>
                 </div>
-                <div className="text-right mx-20">
-                  <h4 className="text-3xl text-gray-900 bg-gray-50 inline uppercase">
+                <div className="text-left mx-20">
+                  <h4 className="text-xl  text-gray-900 bg-gray-50 inline uppercase">
                     {vid.title}
                   </h4>
-                  <p>{vid.description}</p>
+                  <p className="text-xs">{vid.description}</p>
                 </div>
               </div>
             )}

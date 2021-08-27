@@ -11,12 +11,6 @@ body {
   background-color: black;
   margin: 0;
 }
-
-.maxWidth {
-  max-width: 1024px;
-  margin: auto;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -24,4 +18,40 @@ html {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/*  1024 px max on everything except navbar  */
+.maxWidth {
+  max-width: 1024px;
+  margin: auto;
+}
+
+/*  transition for video slider in mobile  */
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+  transform: scale(0.92);
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1);
+}
+
+/*  transition for mobile menu  */
+.mob-menu {
+  display: none;
+  opacity: 0;
+  transition-duration: 500ms ease-in-out;
+  transform: scaleY(0);
+}
+
+.mob-menu.active {
+  display: inline;
+  opacity: 1;
+  transform-origin: top;
+  transition-duration: 500ms;
+  transform: scaleY(1);
+  width: 100vw;
 }

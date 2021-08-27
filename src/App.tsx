@@ -107,6 +107,30 @@ function App(): JSX.Element {
       0.2, 0.2, 1,
     ]
   );
+  const { innerWidth: width } = window;
+  const mobileWidth = width / 2;
+  console.log(width);
+  const posEightMob = pos.eight + 100;
+  const posTeamMob = pos.team + 130;
+  const posJobsMob = pos.jobs + 270;
+  const posServicesMob = pos.services + 140;
+  const yPosAnimMob = useTransform(
+    scrollYProgress,
+    [0, 0.003, 0.008],
+
+    [180, 180, posEightMob]
+  );
+  const xPosAnimMob = useTransform(
+    scrollYProgress,
+    [0, 0.003, 0.008],
+
+    [mobileWidth, mobileWidth, mobileWidth + 10]
+  );
+  const opacityMob = useTransform(
+    scrollYProgress,
+    [0, 0.001, 0.0015, 0.065 /* signif ocho */, 0.07],
+    [1, 1, 0.2, 0.2, 1]
+  );
 
   return (
     <div className="font-mono text-sm">
@@ -127,6 +151,20 @@ function App(): JSX.Element {
             <img
               id="eight"
               className="absolute hidden md:block "
+              src="assets/images/logo-ocho.png"
+              alt="ocho"
+            />
+          </motion.div>
+          <motion.div
+            style={{
+              y: yPosAnimMob,
+              x: xPosAnimMob,
+              transformOrigin: "center center initial",
+            }}
+          >
+            <img
+              id="eight"
+              className="absolute md:hidden w-16"
               src="assets/images/logo-ocho.png"
               alt="ocho"
             />

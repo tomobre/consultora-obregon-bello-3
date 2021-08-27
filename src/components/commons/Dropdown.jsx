@@ -14,13 +14,13 @@ export const Dropdown = (props) => {
       <ul
         onClick={handleClick}
         onMouseLeave={handleClick}
-        className="absolute flex flex-col mt-10 bg-blue items-center"
+        className="absolute flex flex-col mt-10 left-0 right-0 bg-gray-50 items-center"
       >
         {props.menuItems.map((item, index) => {
           return (
             <Link
               key={index}
-              className="flex text-white hover:bg-blue-light-less w-full"
+              className="flex text-gray-900  hover:bg-blue-light-less w-full"
               to={item.path}
               onClick={() => setClick(false)}
             >
