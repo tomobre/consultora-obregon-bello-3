@@ -139,36 +139,48 @@ function App(): JSX.Element {
         {" "}
         <div>
           {" "}
-          <motion.div
-            style={{
-              scale: scaleAnim,
-              y: yPosAnim,
-              x: xPosAnim,
-              opacity: opacity,
-              transformOrigin: "center center initial",
-            }}
-          >
-            <img
-              id="eight"
-              className="absolute hidden md:block "
-              src="assets/images/logo-ocho.png"
-              alt="ocho"
-            />
-          </motion.div>
-          <motion.div
-            style={{
-              y: yPosAnimMob,
-              x: xPosAnimMob,
-              transformOrigin: "center center initial",
-            }}
-          >
-            <img
-              id="eight"
-              className="absolute md:hidden w-16"
-              src="assets/images/logo-ocho.png"
-              alt="ocho"
-            />
-          </motion.div>
+          <div>
+            {" "}
+            <motion.div
+              style={{
+                scale: scaleAnim,
+                y: yPosAnim,
+                x: xPosAnim,
+                opacity: opacity,
+                transformOrigin: "center center initial",
+              }}
+            >
+              <div>
+                {" "}
+                <img
+                  id="eight"
+                  className="absolute hidden md:block "
+                  src="assets/images/logo-ocho.png"
+                  alt="ocho"
+                />
+              </div>
+            </motion.div>
+          </div>
+          <div>
+            {" "}
+            <motion.div
+              style={{
+                y: yPosAnimMob,
+                x: xPosAnimMob,
+                transformOrigin: "center center initial",
+              }}
+            >
+              <div>
+                {" "}
+                <img
+                  id="eight"
+                  className="absolute md:hidden w-16"
+                  src="assets/images/logo-ocho.png"
+                  alt="ocho"
+                />
+              </div>
+            </motion.div>
+          </div>
         </div>
         <div ref={homeRef}>
           <Home></Home>

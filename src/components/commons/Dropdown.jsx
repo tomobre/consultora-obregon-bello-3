@@ -12,7 +12,7 @@ export const Dropdown = (props) => {
   return (
     <>
       <ul
-        onClick={handleClick}
+        onClick={props.close}
         onMouseLeave={handleClick}
         className="absolute flex flex-col mt-10 left-0 right-0 bg-gray-50 items-center"
       >

@@ -81,7 +81,11 @@ const Navbar: React.SFC<NavbarProps> = () => {
             dropdowns["mobile-menu"] ? "mob-menu active" : "mob-menu"
           }`}
         >
-          <Dropdown menuItems={Settings} handler={() => true} />
+          <Dropdown
+            close={hanldeMobileMenu}
+            menuItems={Settings}
+            handler={() => true}
+          />
         </div>
         <div
           // className="nav-links"

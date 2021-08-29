@@ -49,7 +49,7 @@ const VideoSlider = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
   };
   const prevSlide = () => {
-    setCurrent(current === 0 ? -1 : current - 1);
+    setCurrent(current === 0 ? videos.length - 1 : current - 1);
   };
 
   return (
@@ -130,17 +130,14 @@ const VideoSlider = () => {
 
 const Jobs: React.SFC<NavbarProps> = () => {
   return (
-    <div className="my-60 container mx-auto w-2/3">
+    <div id="jobs" className="my-60 container mx-auto w-2/3">
       <h3
         data-aos="fade-up"
         className="text-center my-20 text-gray-50 text-xl "
       >
         Proyectos
       </h3>
-      <div
-        id="jobs"
-        className=" text-gray-200 flex justify-center grid md:grid-cols-2 "
-      >
+      <div className=" text-gray-200 flex justify-center grid md:grid-cols-2 ">
         <div data-aos="fade-up" className="md:hidden block">
           <VideoSlider></VideoSlider>
         </div>
