@@ -11,6 +11,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@nuxt/cli": "^2.15.8",
     "@types/react-transition-group": "^4.4.1",
     "aos": "^2.3.4",
     "framer-motion": "^4.1.17",

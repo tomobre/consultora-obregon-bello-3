@@ -49,9 +49,9 @@ function App(): JSX.Element {
     const homePos = homeRef.current.getBoundingClientRect().top;
     const eightPos = eightRef.current.getBoundingClientRect().top - 200;
     const teamPos = teamRef.current.getBoundingClientRect().top - 270;
-    const contactPos = contactRef.current.getBoundingClientRect().top;
-    const jobsPos = jobsRef.current.getBoundingClientRect().top - 270;
-    const servicesPos = servicesRef.current.getBoundingClientRect().top - 270;
+    const contactPos = contactRef.current.getBoundingClientRect().top - 100;
+    const jobsPos = jobsRef.current.getBoundingClientRect().top - 200;
+    const servicesPos = servicesRef.current.getBoundingClientRect().top - 200;
     console.log(teamPos);
 
     setPos({
@@ -77,8 +77,8 @@ function App(): JSX.Element {
     ],
 
     [
-      300,
-      300,
+      80,
+      80,
       pos.eight,
       pos.eight,
       pos.team,
